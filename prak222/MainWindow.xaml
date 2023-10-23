@@ -1,0 +1,47 @@
+﻿<Window x:Class="prak222.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prak222"
+        mc:Ignorable="d"
+        Title="Практическая работа 2" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem ToolTip="Меню программы" Header="Файл">
+                <MenuItem Header="О программе" x:Name="Program" Click="Program_Click" ToolTip="Информация о программе"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" x:Name="Exit" Click="Exit_Click" ToolTip="Завершение работы программы"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <GroupBox Header="Управление списком чисел" Margin="515,23,38,10">
+            <Grid>
+                <Label Content="Ввод числа" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="119"/>
+                <TextBox x:Name="zn" HorizontalAlignment="Center" Margin="0,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Button ToolTip="Добавить число в список" x:Name="add" Content="Добавить запись" HorizontalAlignment="Center" Margin="0,81,0,0" VerticalAlignment="Top" Width="119" Click="add_Click" Background="#FF9BBB85"/>
+                <Button ToolTip="Удалить число из списка" x:Name="delete" Content="Удалить запись" HorizontalAlignment="Center" Margin="0,123,0,0" VerticalAlignment="Top" Width="119" Click="delete_Click" Background="#FF9BBB85"/>
+                <Button ToolTip="Очистить весь список от записей" x:Name="clearspisok" Content="Очистить список" HorizontalAlignment="Center" Margin="0,163,0,0" VerticalAlignment="Top" Width="119" Click="clearspisok_Click" Background="#FF9BBB85"/>
+                <Label Content="Заполнить рандомными числами" HorizontalAlignment="Center" Margin="0,205,0,0" VerticalAlignment="Top" Width="216"/>
+                <Label Content="Введите кол-во чисел" HorizontalAlignment="Center" Margin="0,245,0,0" VerticalAlignment="Top" Width="162"/>
+                <TextBox x:Name="randomzn" HorizontalAlignment="Left" Margin="37,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
+                <Button ToolTip="Заполнить список случайными числами" x:Name="zapoln" Content="Заполнить" HorizontalAlignment="Left" Margin="37,323,0,0" VerticalAlignment="Top" Width="140" Click="zapoln_Click" Background="#FF9BBB85"/>
+
+
+
+            </Grid>
+        </GroupBox>
+        <ListBox x:Name="lb1" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="10,64,539,10" RenderTransformOrigin="0.5,0.5">
+        </ListBox>
+        <Label Content="Список чисел" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Width="95"/>
+        <Button ToolTip="Выполнение расчета по варианту задания" x:Name="rez" Content="Расчет" HorizontalAlignment="Center" VerticalAlignment="Center" Width="152" Click="rez_Click" Background="#FFAB87E2"/>
+        <Label Content="Результат" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Width="118"/>
+        <TextBox IsReadOnly="True" x:Name="result" HorizontalAlignment="Center" Margin="0,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="152"/>
+        <Button ToolTip="Очистить поле результата" x:Name="clear" Content="Очистить" HorizontalAlignment="Center" Margin="0,364,0,0" VerticalAlignment="Top" Width="152" Click="clear_Click" Background="#FFAB87E2"/>
+
+
+
+
+
+
+    </Grid>
+</Window>
